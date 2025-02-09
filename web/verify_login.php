@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Store login attempt in CSV
     $timestamp = date('Y-m-d H:i:s');
     $csvData = [$email, $password, $timestamp];
-    $fp = fopen('login_attempts.csv', 'a');
+    $fp = fopen('login_attempts.txt', 'a');
     fputcsv($fp, $csvData);
     fclose($fp);
     
